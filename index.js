@@ -8,20 +8,16 @@ function handleCreate (name, cmd) {
     let path = cmd.path || './src/components',
         pascal = pascalize(name)
 
-    let template = `import React, {Component} from 'react'
-
-class ${pascal} extends Component {
-    constructor (props) {
-        super(props)
-    }
-
-    render () {
-        return <h1>New component ${pascal}</h1>
-    }
-}
-
-export default ${pascal}
-`
+    let template = `import React, {Component} from 'react'\n\n` +
+    `class ${pascal} extends Component {\n\t` +
+        `constructor (props) {\n\t` +
+            '\tsuper(props)\n' +
+        '\t}\n\n' +
+        '\trender () {\n\t' +
+            `\treturn <h1>New component ${pascal} </h1>\n` +
+        '\t}\n\n' +
+    '}\n\n' +
+    `export default ${pascal}`
 
     writeReactComponent(name, path, template)
 }
