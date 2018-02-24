@@ -1,0 +1,16 @@
+{
+  "name": "my_cli",
+  "version": "1.0.0",
+  "description": "my own CLI app for code helpers",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar Guerrero",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.14.1"
+  }
+}
