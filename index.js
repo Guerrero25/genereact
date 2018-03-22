@@ -4,6 +4,8 @@
 const commander = require('commander')
 const fs = require('fs')
 
+const pkg = require('./package.json');
+
 function handleCreate (name, cmd) {
     let path = cmd.path || './src/components',
         pascal = pascalize(name)
@@ -46,7 +48,7 @@ function smallCaps (str) {
 }
 
 commander
-    .version('1.0.0', '-v', '--version')
+    .version(pkg.version, '-v, --version')
     .description('My own CLI app')
 
 commander
