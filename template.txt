@@ -1,0 +1,13 @@
+import React, {{Component}} from 'react'
+
+class {pascal_name} extends Component {
+    constructor (props) {
+        super(props)
+    }
+
+    render () {
+        return <h1>New component {pascal_name} </h1>
+    }
+}
+
+export default {pascal_name}
