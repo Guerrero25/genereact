@@ -4,12 +4,13 @@
 const commander = require('commander')
 const fs = require('fs')
 const str = require('./lib/string')
+const config = require('./lib/config')
 
 const pkg = require('./package.json');
 
 function handleCreate (name, cmd) {
-    let path = cmd.path || './src/components',
-        pascal = str.pascalize(name)
+    let path = config.getPathComponents(cmd.path, name),
+        pascal = str.pascalize(name)    
 
     let template = `import React, {Component} from 'react'\n\n` +
     `class ${pascal} extends Component {\n\t` +
@@ -22,12 +23,10 @@ function handleCreate (name, cmd) {
     '}\n\n' +
     `export default ${pascal}`
 
-    writeReactComponent(name, path, template)
+    writeReactComponent(path, template)
 }
 
-function writeReactComponent (name, path, data) {
-    let url = `${path}/${str.smallCaps(name)}.js`
-
+function writeReactComponent (path, data) {
     fs.writeFile(url, data, function (err) {
         if (err) throw console.log(err)
         console.log('New component created!')
