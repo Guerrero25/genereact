@@ -36,10 +36,10 @@ function writeReactComponent (name, path, data) {
 
 commander
     .version(pkg.version, '-v, --version')
-    .description('My own CLI app')
+    .description('CLI tools for react component')
 
 commander
-    .command('crc <name>')
+    .command('component <name>')
     .option('-p, --path [path]', 'Change path of component')
     .action(handleCreate)
 

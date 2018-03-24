@@ -1,14 +1,20 @@
 {
-  "name": "my_cli",
+  "name": "react-g",
   "version": "1.0.0",
-  "description": "my own CLI app for code helpers",
+  "description": "simple CLI tools for create react component",
   "main": "index.js",
   "preferGlobal": true,
-  "bin": "./index.js",
+  "bin": {
+    "react-g": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Omar Guerrero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guerrero25/react-g.git"
+  },
+  "author": "Omar Guerrero <guerrero9725@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "commander": "^2.14.1"
