@@ -1,11 +1,11 @@
 {
-  "name": "react-g",
+  "name": "genereact",
   "version": "1.0.0",
   "description": "simple CLI tools for create react component",
   "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "react-g": "./index.js"
+    "genereact": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
