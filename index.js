@@ -9,15 +9,17 @@ const templates = require('./lib/template');
 
 const pkg = require('./package.json');
 
-function handleCreate (name, cmd) {
-    let path = config.getPathComponents(cmd.path, name),
-        data = {
-            pascal_name: str.pascalize(name)
-        }
+function handleCreate (names, cmd) {
+    names.forEach(name => {
+        let path = config.getPathComponents(cmd.path, name),
+            data = {
+                pascal_name: str.pascalize(name)
+            }
 
-    let template = templates.getCompileTemplate(data)
+        let template = templates.getCompileTemplate(data)
 
-    writeReactComponent(path, template)
+        writeReactComponent(path, template)
+    })
 }
 
 function writeReactComponent (path, data) {
@@ -32,7 +34,8 @@ commander
     .description('CLI tools for react component')
 
 commander
-    .command('component <name>')
+    .command('component <names...>')
+    .description('Create one list of components in the path specific.')
     .option('-p, --path [path]', 'Change path of component')
     .action(handleCreate)
 
