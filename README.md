@@ -1,10 +1,12 @@
-# GeneReact [![npm][npm-image]][npm-url] [![npm downloads][downloads-image]][downloads-url]
+# GeneReact [![npm][npm-image]][npm-url] [![npm downloads][downloads-image]][downloads-url] [![Travis CI][travis-img]][travis-url]
 its my own cli tool for the *generation of react component*
 
 [npm-image]: https://img.shields.io/npm/v/genereact.svg
 [npm-url]: https://www.npmjs.com/package/genereact
 [downloads-image]: https://img.shields.io/npm/dm/genereact.svg
 [downloads-url]: https://www.npmjs.com/package/genereact
+[travis-img]: https://img.shields.io/travis/Guerrero25/genereact.svg
+[travis-url]: https://travis-ci.org/Guerrero25/genereact
 
 ## Instalations
 1. `npm i -g genereact`
@@ -25,4 +27,4 @@ specifies the path where the created component will be stored
 the default path is `./src/components`
 
 ## License
-The license here: [MIT](https://github.com/Guerrero25/genereact/LICENSE)
+The license here: [MIT](https://github.com/Guerrero25/genereact/blob/master/LICENSE)
