@@ -1,4 +1,4 @@
-# GeneReact [![npm][npm-image]][npm-url] [![npm downloads][downloads-image]][standard-url]
+# GeneReact [![npm][npm-image]][npm-url] [![npm downloads][downloads-image]][downloads-url]
 its my own cli tool for the *generation of react component*
 
 [npm-image]: https://img.shields.io/npm/v/genereact.svg
