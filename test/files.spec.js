@@ -5,7 +5,7 @@ describe('Test files module', () => {
     describe('getCurrentDirctoryBase', () => {
         it('should return the current directory', () => {
             expect(files.getCurrentDirctoryBase()).to.be.a('string')
-            expect(files.getCurrentDirctoryBase()).to.equal(process.cwd())
+            expect(files.getCurrentDirctoryBase()).to.equal(files.join(__dirname, '..'))
         })
     })
 
